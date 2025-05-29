@@ -68,6 +68,71 @@ Virtual Community addresses the limitations of current embodied AI platforms by 
 - `npm run preview` - Preview production build locally
 - `npm run astro` - Run Astro CLI commands
 
+## 🚀 Deployment
+
+This project is configured for automatic deployment to GitHub Pages.
+
+### GitHub Pages Setup
+
+The site is configured to deploy to: `https://weebao.github.io/vico-web`
+
+**Automatic Deployment:**
+
+- Pushes to the `main` branch automatically trigger deployment
+- GitHub Actions workflow builds and deploys the site
+- No manual intervention required
+
+**Manual Deployment:**
+
+- Go to the Actions tab in your GitHub repository
+- Run the "Deploy to GitHub Pages" workflow manually
+
+**Requirements:**
+
+- Repository must have GitHub Pages enabled
+- Source should be set to "GitHub Actions" in repository settings
+- The workflow file is located at `.github/workflows/deploy.yml`
+
+### Local Production Build
+
+To test the production build locally:
+
+```bash
+npm run build
+npm run preview
+```
+
+## 🚀 Deployment
+
+This project is configured for automatic deployment to GitHub Pages.
+
+### GitHub Pages Setup
+
+The site is configured to deploy to: `https://weebao.github.io/vico-web`
+
+**Automatic Deployment:**
+- Pushes to the `main` branch automatically trigger deployment
+- GitHub Actions workflow builds and deploys the site
+- No manual intervention required
+
+**Manual Deployment:**
+- Go to the Actions tab in your GitHub repository
+- Run the "Deploy to GitHub Pages" workflow manually
+
+**Requirements:**
+- Repository must have GitHub Pages enabled
+- Source should be set to "GitHub Actions" in repository settings
+- The workflow file is located at `.github/workflows/deploy.yml`
+
+### Local Production Build
+
+To test the production build locally:
+
+```bash
+npm run build
+npm run preview
+```
+
 ## 🎨 Design System
 
 ### Colors
