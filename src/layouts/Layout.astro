@@ -1,0 +1,37 @@
+---
+import '../styles/global.css';
+
+export interface Props {
+	title?: string;
+}
+
+const { title = "Virtual Community - Multi-Agent Embodied AI Simulation" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content="Virtual Community: An open-world simulation platform for embodied multi-agent research with scalable 3D environments and scene-grounded agent communities." />
+		<title>{title}</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	</head>
+	<body class="font-sans antialiased bg-gray-950 text-white">
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	html {
+		font-family: 'Inter', system-ui, sans-serif;
+	}
+	
+	* {
+		box-sizing: border-box;
+	}
+</style>
