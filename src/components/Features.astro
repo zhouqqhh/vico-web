@@ -2,8 +2,7 @@
 ---
 
 <section id="features" class="py-24 bg-gray-950">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">    <div class="text-center mb-16 fade-in-up">
       <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
         Key Features
       </h2>
@@ -14,7 +13,7 @@
     
     <div class="grid lg:grid-cols-2 gap-12">
       <!-- Feature 1: Scalable Scenes -->
-      <div class="bg-gradient-to-br from-blue-500/10 to-cyan-500/10 p-8 rounded-2xl border border-blue-500/20">
+      <div class="bg-gradient-to-br from-blue-500/10 to-cyan-500/10 p-8 rounded-2xl border border-blue-500/20 slide-in-left">
         <div class="flex items-center mb-6">
           <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mr-4">
             <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -125,7 +124,7 @@
       </div>
       
       <!-- Feature 2: Agent Communities -->
-      <div class="bg-gradient-to-br from-purple-500/10 to-pink-500/10 p-8 rounded-2xl border border-purple-500/20">
+      <div class="bg-gradient-to-br from-purple-500/10 to-pink-500/10 p-8 rounded-2xl border border-purple-500/20 slide-in-right">
         <div class="flex items-center mb-6">
           <div class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mr-4">
             <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -206,30 +205,66 @@
                 </circle>
               </svg>
             </div>
-            
-            <div class="bg-gray-800/50 p-3 rounded border border-gray-700 relative overflow-hidden group">
+              <div class="bg-gray-800/50 p-3 rounded border border-gray-700 relative overflow-hidden group">
               <div class="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <div class="flex items-center justify-between relative">
-                <div>
-                  <div class="text-purple-400 font-semibold text-sm">Chad Thompson</div>
-                  <div class="text-gray-300 text-xs">Groups: ["Berlin Foodies Club"]</div>
+              <div class="relative">
+                <div class="flex items-center justify-between mb-2">
+                  <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-purple-500/20 rounded-full flex items-center justify-center">
+                      <span class="text-xs font-bold text-purple-400">CT</span>
+                    </div>
+                    <div>
+                      <div class="text-purple-400 font-semibold text-sm">Chad Thompson</div>
+                      <div class="text-gray-300 text-xs">Groups: ["Berlin Foodies Club"]</div>
+                    </div>
+                  </div>
+                  <div class="text-xs text-gray-400">
+                    Living: Palais
+                  </div>
                 </div>
-                <div class="text-xs text-gray-400">
-                  Lifestyle: Innovative
-                </div>
+                <div class="text-xs text-gray-500">Lifestyle: Social, Values: Community</div>
               </div>
             </div>
             
             <div class="bg-gray-800/50 p-3 rounded border border-gray-700 relative overflow-hidden group">
               <div class="absolute inset-0 bg-gradient-to-r from-pink-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <div class="flex items-center justify-between relative">
-                <div>
-                  <div class="text-pink-400 font-semibold text-sm">Kate Novak</div>
-                  <div class="text-gray-300 text-xs">Groups: ["Campus"], Student</div>
+              <div class="relative">
+                <div class="flex items-center justify-between mb-2">
+                  <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-pink-500/20 rounded-full flex items-center justify-center">
+                      <span class="text-xs font-bold text-pink-400">KN</span>
+                    </div>
+                    <div>
+                      <div class="text-pink-400 font-semibold text-sm">Kate Novak</div>
+                      <div class="text-gray-300 text-xs">Groups: ["Campus"], Student</div>
+                    </div>
+                  </div>
+                  <div class="text-xs text-gray-400">
+                    Living: McCormick
+                  </div>
                 </div>
-                <div class="text-xs text-gray-400">
-                  Living: McCormick
+                <div class="text-xs text-gray-500">Cash: $50, Values: Education, Growth</div>
+              </div>
+            </div>
+
+            <div class="bg-gray-800/50 p-3 rounded border border-gray-700 relative overflow-hidden group">
+              <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div class="relative">
+                <div class="flex items-center justify-between mb-2">
+                  <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-cyan-500/20 rounded-full flex items-center justify-center">
+                      <span class="text-xs font-bold text-cyan-400">EM</span>
+                    </div>
+                    <div>
+                      <div class="text-cyan-400 font-semibold text-sm">Elon Musk</div>
+                      <div class="text-gray-300 text-xs">Values: Power, Innovation</div>
+                    </div>
+                  </div>
+                  <div class="text-xs text-gray-400">
+                    Cash: $1000
+                  </div>
                 </div>
+                <div class="text-xs text-gray-500">Lifestyle: Innovative, Entrepreneur</div>
               </div>
             </div>
           </div>
@@ -238,7 +273,7 @@
     </div>
     
     <!-- Additional Features Grid -->
-    <div class="grid md:grid-cols-3 gap-6 mt-16">
+    <div class="grid md:grid-cols-3 gap-6 mt-16 stagger-children">
       <div class="bg-gray-800/30 p-6 rounded-xl border border-gray-700 text-center">
         <div class="w-10 h-10 bg-green-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
           <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -246,17 +281,16 @@
           </svg>
         </div>
         <h4 class="text-lg font-semibold text-white mb-2">Dynamic Traffic</h4>
-        <p class="text-gray-400 text-sm">Automated traffic generation with vehicles and pedestrians based on real road networks</p>
+        <p class="text-gray-400 text-sm">Automated traffic generation with vehicles, pedestrians, and transit system based on real road networks</p>
       </div>
-      
-      <div class="bg-gray-800/30 p-6 rounded-xl border border-gray-700 text-center">
+        <div class="bg-gray-800/30 p-6 rounded-xl border border-gray-700 text-center">
         <div class="w-10 h-10 bg-orange-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
           <svg class="w-5 h-5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
           </svg>
         </div>
-        <h4 class="text-lg font-semibold text-white mb-2">Grounding Validation</h4>
-        <p class="text-gray-400 text-sm">Ensures agent profiles accurately reference existing scene locations and contexts</p>
+        <h4 class="text-lg font-semibold text-white mb-2">Daily Schedules Completion</h4>
+        <p class="text-gray-400 text-sm">Agents carry out realistic daily routines based on automatically generated activity schedules</p>
       </div>
       
       <div class="bg-gray-800/30 p-6 rounded-xl border border-gray-700 text-center">
@@ -271,3 +305,61 @@
     </div>
   </div>
 </section>
+
+<style>
+/* Scroll Animation Styles */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-up.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.slide-in-left.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.slide-in-right.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+</style>
+
+<script>
+  // Scroll animation functionality
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate')
+      }
+    })
+  }, observerOptions)
+
+  // Observe all elements with animation classes
+  document.addEventListener('DOMContentLoaded', () => {
+    const animatedElements = document.querySelectorAll('.fade-in-up, .slide-in-left, .slide-in-right')
+    animatedElements.forEach((el) => observer.observe(el))
+  })
+</script>

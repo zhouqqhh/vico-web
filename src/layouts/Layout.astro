@@ -23,6 +23,28 @@ const { title = "Virtual Community - Multi-Agent Embodied AI Simulation" } = Ast
 	</head>
 	<body class="font-sans antialiased bg-gray-950 text-white">
 		<slot />
+		
+		<script>
+			// Global scroll animation functionality
+			const observerOptions = {
+				threshold: 0.1,
+				rootMargin: '0px 0px -50px 0px'
+			}
+
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('animate')
+					}
+				})
+			}, observerOptions)
+
+			// Initialize animations when DOM is loaded
+			document.addEventListener('DOMContentLoaded', () => {
+				const animatedElements = document.querySelectorAll('.fade-in-up, .slide-in-left, .slide-in-right, .stagger-children')
+				animatedElements.forEach((el) => observer.observe(el))
+			})
+		</script>
 	</body>
 </html>
 
@@ -33,5 +55,77 @@ const { title = "Virtual Community - Multi-Agent Embodied AI Simulation" } = Ast
 	
 	* {
 		box-sizing: border-box;
+	}
+
+	/* Global Scroll Animation Styles */
+	.fade-in-up {
+		opacity: 0;
+		transform: translateY(30px);
+		transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+	}
+
+	.fade-in-up.animate {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	.slide-in-left {
+		opacity: 0;
+		transform: translateX(-30px);
+		transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+	}
+
+	.slide-in-left.animate {
+		opacity: 1;
+		transform: translateX(0);
+	}
+
+	.slide-in-right {
+		opacity: 0;
+		transform: translateX(30px);
+		transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+	}
+
+	.slide-in-right.animate {
+		opacity: 1;
+		transform: translateX(0);
+	}
+
+	.stagger-children > * {
+		opacity: 0;
+		transform: translateY(20px);
+		transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+	}
+
+	.stagger-children.animate > * {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	.stagger-children.animate > *:nth-child(1) { transition-delay: 0.1s; }
+	.stagger-children.animate > *:nth-child(2) { transition-delay: 0.2s; }
+	.stagger-children.animate > *:nth-child(3) { transition-delay: 0.3s; }
+	.stagger-children.animate > *:nth-child(4) { transition-delay: 0.4s; }
+	.stagger-children.animate > *:nth-child(5) { transition-delay: 0.5s; }
+	.stagger-children.animate > *:nth-child(6) { transition-delay: 0.6s; }
+
+	/* Hero animations on page load */
+	.hero-animate {
+		opacity: 0;
+		transform: translateY(20px);
+		animation: heroFadeIn 1s ease-out 0.3s forwards;
+	}
+
+	.hero-animate-delay {
+		opacity: 0;
+		transform: translateY(20px);
+		animation: heroFadeIn 1s ease-out 0.6s forwards;
+	}
+
+	@keyframes heroFadeIn {
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
 	}
 </style>
